@@ -315,8 +315,8 @@ func TestModel_Update(t *testing.T) {
 		model := InitialModel()
 		cmd := model.Init()
 
-		if cmd != nil {
-			t.Error("Expected Init to return nil command")
+		if cmd == nil {
+			t.Error("Expected Init to return a command, got nil")
 		}
 	})
 }
